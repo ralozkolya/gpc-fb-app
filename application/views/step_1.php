@@ -14,10 +14,14 @@
 			<div>
 				<h4 class="title bpg-nino text-center"><?php echo lang('activate_points'); ?></h4>
 			</div>
+			<div class="steps">
+				<img alt="Steps" src="<?php echo static_url('img/step_1.png'); ?>">
+			</div>
 			<div class="step-description">
 				<strong><?php echo lang('step'); ?> 1.</strong>
 				<span><?php echo lang('fill_form'); ?></span>
 			</div>
+			<br>
 			<div>
 				<form id="check-form" method="post" action="<?php echo base_url('check'); ?>">
 					<div class="input-container">

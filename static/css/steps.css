@@ -25,3 +25,8 @@ strong {
 	border: solid 1px #c5c5c5;
 	width: 100%;
 }
+
+.message {
+	border: solid 1px #c5c5c5;
+	padding: 35px 20px;
+}
