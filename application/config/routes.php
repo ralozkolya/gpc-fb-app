@@ -51,7 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
-$route['(:num)'] = 'app/index/$1';
+$route['check'] = 'app/check';
+$route['finish'] = 'app/finish';
 
 $route['default_controller'] = 'app';
 $route['404_override'] = '';

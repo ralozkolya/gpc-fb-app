@@ -1,0 +1,16 @@
+.centered {
+	padding: 115px 20px;
+}
+
+.heading {
+	font-size: 20px;
+}
+
+.description {
+	font-size: 15px;
+}
+
+.tinted {
+	padding: 20px;
+	background: #f9f8f8;
+}

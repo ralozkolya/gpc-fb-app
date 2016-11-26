@@ -1,6 +1,27 @@
-.title {
-	display: inline-block;
-	padding: 0 15px 8px 15px;
-	color: #5c5c5c;
-	border-bottom: solid 2px #dedede;
+strong {
+	color: #666;
+}
+
+.step-description {
+	font-size: 15px;
+	color: #999;
+}
+
+.input-container {
+	position: relative;
+}
+
+.input-container > label {
+	position: absolute;
+	top: 18px;
+	left: 10px;
+	color: #6c8bc6;
+	font-size: 13px;
+}
+
+.text-input {
+	margin: 10px 0;
+	padding: 30px 10px 8px 10px;
+	border: solid 1px #c5c5c5;
+	width: 100%;
 }
