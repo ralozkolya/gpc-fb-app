@@ -1,0 +1,25 @@
+@font-face {
+	font-family: 'BPG Nino Mtavruli';
+	src: url('../font/bpg-nino-mtavruli-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../font/bpg-nino-mtavruli-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../font/bpg-nino-mtavruli-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('../font/bpg-nino-mtavruli-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('../font/bpg-nino-mtavruli-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../font/bpg-nino-mtavruli-webfont.svg#bpg_nino_mtavrulibold') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'BPG Nino Mtavruli';
+	src: url('../font/bpg-nino-mtavruli-bold-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../font/bpg-nino-mtavruli-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../font/bpg-nino-mtavruli-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('../font/bpg-nino-mtavruli-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('../font/bpg-nino-mtavruli-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../font/bpg-nino-mtavruli-bold-webfont.svg#bpg_nino_mtavrulibold') format('svg'); /* Legacy iOS */
+	font-weight: bold;
+}
+
+
+.bpg-nino {
+	font-family: "BPG Nino Mtavruli";
+}

@@ -1,0 +1,31 @@
+.wrapper {
+	width: 810px;
+	height: 1100px;
+	margin: 0 auto;
+	padding: 120px 120px 300px 120px;
+	background: url('../img/bg.png');
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url('../img/content_bg.svg');
+	background-size: contain;
+	padding: 60px 95px;
+}
+
+.btn-primary {
+	position: absolute;
+	left: 120px;
+	bottom: 60px;
+	font-family: "BPG Nino Mtavruli";
+	width: calc(100% - 240px);
+	font-size: 25px;
+	font-weight: bold;
+	background: #007EFF;
+	padding: 15px 50px 10px 50px;
+	border-radius: 30px;
+	outline: none !important;
+	box-shadow: 0 2px 3px rgba(0, 126, 255, 0.5);
+}

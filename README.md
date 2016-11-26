@@ -1,1 +1,1 @@
-gpc
+GPC FB app repository
