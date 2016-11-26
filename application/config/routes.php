@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['check'] = 'app/check';
 $route['finish'] = 'app/finish';
+$route['privacy'] = 'app/privacy';
 
 $route['default_controller'] = 'app';
 $route['404_override'] = '';

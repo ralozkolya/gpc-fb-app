@@ -34,6 +34,10 @@ class App extends MY_Controller {
 		$this->load->view('finish', $this->data);
 	}
 
+	public function privacy() {
+		echo '<h1>Under construction...</h1>';
+	}
+
 }
 
 /* End of file App.php */
