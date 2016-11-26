@@ -6,11 +6,16 @@ $(function(){
 
 	function checkStatus(response, login) {
 		if(response.status === 'connected') {
-			location.reload();
+			location.assign(url.base);
 		}
 
-		else if(login) {
-			FB.login(checkStatus);
+		else {
+			if(login) {
+				FB.login(checkStatus);
+			}
+
+			$('.require-login').show();
+			$('.loading').hide();
 		}
 	}
 
