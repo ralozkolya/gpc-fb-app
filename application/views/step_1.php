@@ -6,9 +6,6 @@
 	<script src="<?php echo static_url('js/step_1.js?v='.V); ?>"></script>
 </head>
 <body>
-	<div class="pull-right">
-		<div class="btn btn-danger delete-permissions">წაშლა</div>
-	</div>
 	<div class="wrapper text-center">
 		<div class="content">
 			<div>
@@ -46,7 +43,10 @@
 							data-pattern="[^\d]">
 					</div>
 					<div>
-						<button type="submit" class="btn btn-primary"><?php echo lang('agree'); ?></button>
+						<button id="submit-button" type="submit" class="btn btn-primary">
+							<img class="loading" alt="Loading" src="<?php echo static_url('img/loading.gif'); ?>">
+							<?php echo lang('check'); ?>
+						</button>
 					</div>
 				</form>
 			</div>

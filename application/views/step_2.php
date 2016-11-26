@@ -6,9 +6,6 @@
 	<script src="<?php echo static_url('js/step_2.js?v='.V); ?>"></script>
 </head>
 <body>
-	<div class="pull-right">
-		<div class="btn btn-danger delete-permissions">წაშლა</div>
-	</div>
 	<div class="wrapper text-center">
 		<div class="content">
 			<div>
@@ -31,7 +28,10 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</div>
 			<div>
-				<button id="share-button" class="btn btn-primary"><?php echo lang('share'); ?></button>
+				<button id="share-button" class="btn btn-primary">
+					<img class="loading" alt="Loading" src="<?php echo static_url('img/loading.gif'); ?>">
+					<?php echo lang('share'); ?>
+				</button>
 			</div>
 		</div>
 	</div>

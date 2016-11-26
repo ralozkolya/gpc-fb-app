@@ -23,9 +23,11 @@ $(function(){
 		}.bind(this));
 
 		if(!valid) {
-
 			return false;
 		}
+
+		$('#submit-button').attr('disabled', 'disabled');
+		$('#submit-button > .loading').show();
 	});
 
 	$('#check-form input').on('focus input', function(){
