@@ -19,7 +19,22 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: 'BPG Arial';
+	src: url('../font/bpg-arial-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../font/bpg-arial-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../font/bpg-arial-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('../font/bpg-arial-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('../font/bpg-arial-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../font/bpg-arial-webfont.svg#bpg_nino_mtavrulibold') format('svg'); /* Legacy iOS */
+	font-weight: bold;
+}
+
 
 .bpg-nino {
-	font-family: "BPG Nino Mtavruli";
+	font-family: "BPG Nino Mtavruli", Arial, Sans-serif;
+}
+
+.bpg-arial {
+	font-family: "BPG Arial", Arial, Sans-serif;
 }
