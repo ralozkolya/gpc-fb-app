@@ -21,10 +21,10 @@ body {
 
 .btn-primary {
 	position: absolute;
-	left: 120px;
+	left: 95px;
 	bottom: 60px;
 	font-family: "BPG Nino Mtavruli";
-	width: calc(100% - 240px);
+	width: calc(100% - 190px);
 	font-size: 25px;
 	font-weight: bold;
 	background: #007EFF;
