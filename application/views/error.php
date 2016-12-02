@@ -13,7 +13,7 @@
 			<div class="centered">
 				<div class="tinted">
 					<div class="warning"></div>
-					<div><?php echo lang('error_description'); ?></div>
+					<div><?php echo $error_description; ?></div>
 				</div>
 			</div>
 			<div>

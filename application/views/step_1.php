@@ -24,6 +24,9 @@
 					<div class="input-container">
 						<label for="ticket-number"><?php echo lang('ticket_number'); ?></label>
 						<input
+							<?php if($input && $input['ticket-number']): ?>
+							value="<?php echo $input['ticket-number']; ?>"
+							<?php endif; ?>
 							type="text" class="text-input" id="ticket-number"
 							name="ticket-number" placeholder="XX XX XX XX"
 							data-pattern="[^\d]" autofocus>
@@ -31,6 +34,9 @@
 					<div class="input-container">
 						<label for="card-number"><?php echo lang('card_number'); ?></label>
 						<input
+							<?php if($input && $input['card-number']): ?>
+							value="<?php echo $input['card-number']; ?>"
+							<?php endif; ?>
 							type="text" class="text-input" id="card-number"
 							name="card-number" placeholder="XX XX XX XX"
 							data-pattern="[^\d]">
@@ -38,6 +44,9 @@
 					<div class="input-container">
 						<label for="phone"><?php echo lang('phone'); ?></label>
 						<input
+							<?php if($input && $input['phone']): ?>
+							value="<?php echo $input['phone']; ?>"
+							<?php endif; ?>
 							type="text" class="text-input" id="phone"
 							name="phone" placeholder="XXX XX XX XX"
 							data-pattern="[^\d]">
