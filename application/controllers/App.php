@@ -16,7 +16,7 @@ class App extends MY_Controller {
 
 		$this->data['input'] = $this->session->userdata('input');
 		$this->session->unset_userdata('input');
-		$this->load->view('step_1', $this->data);
+		$this->view('step_1');
 	}
 
 	public function check() {
@@ -35,18 +35,18 @@ class App extends MY_Controller {
 			$this->load->model('FacebookOrder');
 
 			if(!$this->FacebookOrder->exists($ticket_number, $card_number)) {
-				$this->load->view('step_2', $this->data);
+				$this->view('step_2');
 			}
 
 			else {
 				$this->data['error_description'] = lang('already_used');
-				$this->load->view('error', $this->data);
+				$this->view('error');
 			}
 		}
 
 		else {
 			$this->data['error_description'] = lang('incorrect_data');
-			$this->load->view('error', $this->data);
+			$this->view('error');
 		}
 	}
 
@@ -60,13 +60,13 @@ class App extends MY_Controller {
 		if($input) {
 			if($this->FacebookOrder->add($input)) {
 				$this->session->unset_userdata('input');
-				$this->load->view('finish', $this->data);
+				$this->view('finish');
 			}
 		}
 
 		else {
 			$this->data['error_description'] = lang('incorrect_data');
-			$this->load->view('error', $this->data);
+			$this->view('error');
 		}
 	}
 

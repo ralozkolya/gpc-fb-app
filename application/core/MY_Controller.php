@@ -15,6 +15,10 @@ class MY_Controller extends CI_Controller {
 		$this->data['user'] = $this->fb->get_user();
 	}
 
+	protected function view($view)  {
+		return $this->load->view($view, $this->data);
+	}
+
 }
 
 /* End of file MY_Controller.php */
