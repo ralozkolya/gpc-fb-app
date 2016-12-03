@@ -26,6 +26,8 @@ class App extends MY_Controller {
 
 		if($this->form_validation->run('check')) {
 
+			$this->load->database();
+
 			$ticket_number = $this->input->post('ticket-number');
 			$card_number = $this->input->post('card-number');
 			$phone = $this->input->post('phone');
@@ -52,6 +54,7 @@ class App extends MY_Controller {
 	public function finish() {
 
 		$this->load->view('finish', $this->data);
+		$this->load->database();
 	}
 
 	public function privacy() {
