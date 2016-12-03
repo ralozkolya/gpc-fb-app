@@ -75,6 +75,10 @@ class App extends MY_Controller {
 		echo '<h1>Under construction...</h1>';
 	}
 
+	public function add_to_fb() {
+		$this->view('add_to_fb');
+	}
+
 }
 
 /* End of file App.php */
