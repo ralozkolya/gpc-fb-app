@@ -35,7 +35,6 @@ class App extends MY_Controller {
 			$this->load->model('FacebookOrder');
 
 			if(!$this->FacebookOrder->exists($ticket_number, $card_number)) {
-				$this->FacebookOrder->add($ticket_number, $card_number, $phone);
 				$this->load->view('step_2', $this->data);
 			}
 
@@ -53,8 +52,22 @@ class App extends MY_Controller {
 
 	public function finish() {
 
-		$this->load->view('finish', $this->data);
 		$this->load->database();
+		$this->load->model('FacebookOrder');
+
+		$input = $this->session->userdata('input');
+		
+		if($input) {
+			if($this->FacebookOrder->add($input)) {
+				$this->session->unset_userdata('input');
+				$this->load->view('finish', $this->data);
+			}
+		}
+
+		else {
+			$this->data['error_description'] = lang('incorrect_data');
+			$this->load->view('error', $this->data);
+		}
 	}
 
 	public function privacy() {

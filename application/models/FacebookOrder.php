@@ -12,11 +12,12 @@ class FacebookOrder extends CI_Model {
 		])->num_rows();
 	}
 
-	public function add($ticket_id, $card_id, $phone) {
+	public function add($data) {
+
 		return $this->db->insert($this->table, [
-			'TicketID' => $ticket_id,
-			'CardID' => $card_id,
-			'Phone' => $phone,
+			'TicketID' => $data['ticket-number'],
+			'CardID' => $data['card-number'],
+			'Phone' => $data['phone'],
 			'TransDate' => date('Y-m-d H:i:s'),
 		]);
 	}
