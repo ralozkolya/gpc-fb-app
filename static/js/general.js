@@ -11,5 +11,7 @@ $(function(){
 			version: 'v2.8',
 			cookie: true,
 		});
+
+		FB.AppEvents.logPageView();
 	});
 });
