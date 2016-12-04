@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div>
-				<a href="<?php echo base_url(); ?>" class="btn btn-primary"><?php echo lang('back'); ?></a>
+				<a href="<?php echo base_url(); ?>" class="btn btn-primary button"><?php echo lang('back'); ?></a>
 			</div>
 		</div>
 	</div>

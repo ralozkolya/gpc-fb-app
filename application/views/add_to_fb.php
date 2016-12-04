@@ -8,7 +8,7 @@
 		<div class="row">
 			<div class="col-xs-12 text-center">
 				<h1>Facebook-ის გვერდზე დამატება:</h1>
-				<div><button class="add-button btn btn-default">დამატება</button></div>
+				<div><button class="add-button btn btn-primary">დამატება</button></div>
 			</div>
 		</div>
 	</div>

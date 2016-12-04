@@ -28,7 +28,7 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</div>
 			<div>
-				<button id="share-button" class="btn btn-primary">
+				<button id="share-button" class="btn btn-primary button">
 					<img class="loading" alt="Loading" src="<?php echo static_url('img/loading.gif'); ?>">
 					<?php echo lang('share'); ?>
 				</button>

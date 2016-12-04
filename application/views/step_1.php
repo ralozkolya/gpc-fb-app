@@ -52,7 +52,7 @@
 							data-pattern="[^\d]">
 					</div>
 					<div>
-						<button id="submit-button" type="submit" class="btn btn-primary">
+						<button id="submit-button" type="submit" class="btn btn-primary button">
 							<img class="loading" alt="Loading" src="<?php echo static_url('img/loading.gif'); ?>">
 							<?php echo lang('check'); ?>
 						</button>

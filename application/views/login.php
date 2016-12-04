@@ -15,7 +15,7 @@
 				<h3><?php echo lang('require_login'); ?></h3>
 			</div>
 			<div>
-				<button id="login-button" class="btn btn-primary"><?php echo lang('login'); ?></button>
+				<button id="login-button" class="btn btn-primary button"><?php echo lang('login'); ?></button>
 			</div>
 		</div>
 	</div>

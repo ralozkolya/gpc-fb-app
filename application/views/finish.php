@@ -20,7 +20,7 @@
 				<div class="bpg-nino description"><?php echo lang('points_added'); ?></div>
 			</div>
 			<div>
-				<a href="<?php echo base_url(); ?>" class="btn btn-primary"><?php echo lang('main_page'); ?></a>
+				<a href="<?php echo base_url(); ?>" class="btn btn-primary button"><?php echo lang('main_page'); ?></a>
 			</div>
 		</div>
 	</div>
