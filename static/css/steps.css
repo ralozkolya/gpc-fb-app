@@ -31,6 +31,10 @@ strong {
 	padding: 35px 20px;
 }
 
+.message > h3 {
+	margin: 10px 0;
+}
+
 .loading {
 	display: none;
 	position: relative;
