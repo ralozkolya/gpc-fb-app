@@ -22,6 +22,12 @@ class Sms
 
 		$params = $this->params;
 
+		if(0 !== strpos((string) $number, '995')) {
+			if(strlen($number) === 9) {
+				$number = '995' . $number;
+			}
+		}
+
 		$result = $this->client->get($this->url, [
 			'query' => [
 				'username' => $params['username'],
@@ -29,7 +35,7 @@ class Sms
 				'client_id' => $params['client_id'],
 				'service_id' => $params['service_id'],
 				'to' => $number,
-				'text' => 'smth',
+				'text' => $this->ci->load->view('sms', NULL, TRUE),
 			],
 		]);
 

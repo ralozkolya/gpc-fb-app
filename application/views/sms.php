@@ -1,0 +1,1 @@
+Gilocavt tqven dagericxat zgarbi baratze 40 vashli. GPC sachuqrebis chuqebis adgili
