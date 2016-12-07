@@ -59,8 +59,16 @@ class App extends MY_Controller {
 		
 		if($input) {
 			if($this->FacebookOrder->add($input)) {
+				$phone = $input['phone'];
+				$this->load->library('Sms');
+				$this->sms->send($phone);
 				$this->session->unset_userdata('input');
 				$this->view('finish');
+			}
+			
+			else {
+				$this->data['error_description'] = lang('already_used');
+				$this->view('error');
 			}
 		}
 
