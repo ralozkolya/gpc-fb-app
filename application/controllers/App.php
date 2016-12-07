@@ -58,16 +58,23 @@ class App extends MY_Controller {
 		$input = $this->session->userdata('input');
 		
 		if($input) {
-			if($this->FacebookOrder->add($input)) {
+
+			try {
+				$this->FacebookOrder->check($input);
 				$phone = $input['phone'];
 				$this->load->library('Sms');
 				$this->sms->send($phone);
 				$this->session->unset_userdata('input');
 				$this->view('finish');
 			}
-			
-			else {
+
+			catch(AlreadyUsedException $e) {
 				$this->data['error_description'] = lang('already_used');
+				$this->view('error');
+			}
+
+			catch(InvalidDataException $e) {
+				$this->data['error_description'] = lang('incorrect_data');
 				$this->view('error');
 			}
 		}

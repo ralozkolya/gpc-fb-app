@@ -21,7 +21,39 @@ class FacebookOrder extends CI_Model {
 		]);
 	}
 
+	public function check($data) {
+
+		$data = $this->db->escape($data);
+		$date = date('Y-m-d H:i:s');
+
+		$result = $this->db->query("
+			DECLARE @val int
+
+			EXECUTE @val = InsFaceBookOrders
+			@TransID = NULL,
+			@TransDate = '{$date}',
+			@CardID = N{$data['card-number']},
+			@TicketID = N{$data['ticket-number']},
+			@Phone = N{$data['phone']}
+
+			SELECT 'status' = @val")->row()->status;
+
+		if($result === 1) {
+			return TRUE;
+		}
+
+		else if($result === 0) {
+			throw new AlreadyUsedException();
+		}
+
+		else {
+			throw new InvalidDataException();
+		}
+	}
 }
+
+class AlreadyUsedException extends Exception {}
+class InvalidDataException extends Exception {}
 
 /* End of file FacebookOrder.php */
 /* Location: ./application/models/FacebookOrder.php */
