@@ -8,7 +8,6 @@ class FacebookOrder extends CI_Model {
 	public function exists($ticket_id, $card_id) {
 		return $this->db->get_where($this->table, [
 			'TicketID' => $ticket_id,
-			'CardID' => $card_id,
 		])->num_rows();
 	}
 
