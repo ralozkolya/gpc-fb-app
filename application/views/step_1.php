@@ -29,7 +29,7 @@
 							<?php endif; ?>
 							type="text" class="text-input" id="ticket-number"
 							name="ticket-number" placeholder="XX XX XX XX"
-							data-pattern="^\d+$" autofocus>
+							data-pattern="^\d+$" autocomplete="off" autofocus>
 					</div>
 					<div class="input-container">
 						<label for="card-number"><?php echo lang('card_number'); ?></label>
@@ -39,7 +39,7 @@
 							<?php endif; ?>
 							type="text" class="text-input" id="card-number"
 							name="card-number" placeholder="XX XX XX XX"
-							data-pattern="^\d+$">
+							data-pattern="^\d+$" autocomplete="off">
 					</div>
 					<div class="input-container">
 						<label for="phone"><?php echo lang('phone'); ?></label>
@@ -49,7 +49,7 @@
 							<?php endif; ?>
 							type="text" class="text-input" id="phone"
 							name="phone" placeholder="5XX XX XX XX"
-							data-pattern="^\+?(995)?[\d]{9}$">
+							data-pattern="^\+?(995)?[\d]{9}$" autocomplete="off">
 					</div>
 					<div>
 						<button id="submit-button" type="submit" class="btn btn-primary button">
