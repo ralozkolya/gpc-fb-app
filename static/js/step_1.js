@@ -8,6 +8,8 @@ $(function(){
 
 		$('input', this).each(function(index, input){
 
+			cleanInput(input);
+
 			var pattern = $(input).attr('data-pattern');
 			
 			if(!check(input, pattern)) {
@@ -36,6 +38,7 @@ $(function(){
 
 	$('#check-form input').blur(function(){
 		var input = this;
+		cleanInput(input);
 		var pattern = $(this).attr('data-pattern');
 		
 		if(!check(input, pattern)) {
@@ -43,11 +46,15 @@ $(function(){
 		}
 	});
 
+	function cleanInput(input) {
+		input.value = input.value.replace(/[\s\-]/gi, '');
+	}
+
 	function check(input, pattern) {
 
 		var regex = new RegExp(pattern, 'gi');
 
-		if(input.value && !input.value.match(regex)) {
+		if(input.value && input.value.match(regex)) {
 			return true;
 		}
 
