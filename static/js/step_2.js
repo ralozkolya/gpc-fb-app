@@ -4,6 +4,7 @@ $(function(){
 		FB.ui({
 			method: 'feed',
 			link: url.base,
+			picture: url.base + 'static/img/share_cropped.png',
 			name: $('.message > h3').html(),
 			description: $('.message > p').html(),
 			caption: '#GPCSACHUQARI',
