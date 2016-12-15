@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="<?php echo static_url('css/fonts.css?v='.V); ?>">
 <link rel="stylesheet" href="<?php echo static_url('css/general.css?v='.V); ?>">
 
+<link rel="icon" type="image/png" href="<?php echo static_url('img/favicon.png'); ?>">
+
 <script>
 	var url = {
 		base: '<?php echo base_url(); ?>',

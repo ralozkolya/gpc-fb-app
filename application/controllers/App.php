@@ -73,7 +73,7 @@ class App extends MY_Controller {
 				$this->view('error');
 			}
 
-			catch(InvalidDataException $e) {
+			catch(Exception $e) {
 				$this->data['error_description'] = lang('incorrect_data');
 				$this->view('error');
 			}
