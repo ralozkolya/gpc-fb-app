@@ -55,6 +55,9 @@ $route['check'] = 'app/check';
 $route['finish'] = 'app/finish';
 $route['privacy'] = 'app/privacy';
 
+$route['add_to_fb'] = 'helper';
+$route['redirect'] = 'helper/redirect';
+
 $route['default_controller'] = 'app';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

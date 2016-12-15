@@ -3,7 +3,7 @@ $(function(){
 	$('#share-button').click(function(){
 		FB.ui({
 			method: 'feed',
-			link: url.base,
+			link: url.base + 'redirect',
 			picture: url.base + 'static/img/share.png',
 			name: $('.message > h3').html(),
 			description: $('.message > p').html(),
