@@ -12,7 +12,7 @@ class App extends MY_Controller {
 		}
 	}
 
-	public function index($step = 1) {
+	public function index() {
 
 		$this->data['input'] = $this->session->userdata('input');
 		$this->session->unset_userdata('input');
