@@ -20,8 +20,9 @@
 			</div>
 			<br>
 			<div class="message text-left">
-				<h3>GPC SACHUQARI</h3>
-				<p>მე დავსაჩუქრდი ჯიპისისგან 40 ქულით. ჯიპისი საჩუქრების ჩუქების ადგილი</p>
+				<h3 class="bpg-nino"><?php echo lang('gpc_gift') ?></h3>
+				<p><?php echo lang('i_got'); ?></p>
+				<p><?php echo lang('gpc_gifts_place'); ?></p>
 			</div>
 			<div>
 				<button id="share-button" class="btn btn-primary button">

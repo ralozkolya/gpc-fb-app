@@ -1,3 +1,7 @@
+h3 {
+	font-weight: bold;
+}
+
 strong {
 	color: #666;
 }
@@ -28,7 +32,7 @@ strong {
 
 .message {
 	border: solid 1px #c5c5c5;
-	padding: 35px 20px;
+	padding: 25px 20px;
 }
 
 .message > h3 {

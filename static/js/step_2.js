@@ -1,12 +1,19 @@
 $(function(){
 
 	$('#share-button').click(function(){
+
+		var description = '';
+
+		$('.message > p').each(function(i, p){
+			description += p.innerHTML + '\n';
+		});
+
 		FB.ui({
 			method: 'feed',
 			link: url.base + 'redirect',
 			picture: url.base + 'static/img/share_new.png',
 			name: $('.message > h3').html(),
-			description: $('.message > p').html(),
+			description: description,
 			caption: '#GPCSACHUQARI',
 			hashtag: '#GPCSACHUQARI',
 		}, function(response){
