@@ -3,25 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class FacebookOrder extends CI_Model {
 
-	private $table = 'FacebookOrders';
-
-	public function exists($ticket_id, $card_id) {
-		return $this->db->get_where($this->table, [
-			'TicketID' => $ticket_id,
-		])->num_rows();
-	}
-
-	public function add($data) {
-
-		return $this->db->insert($this->table, [
-			'TicketID' => $data['ticket-number'],
-			'CardID' => $data['card-number'],
-			'Phone' => $data['phone'],
-			'TransDate' => date('Y-m-d H:i:s'),
-		]);
-	}
-
-	public function check($data) {
+	public function procedure($data, $check) {
 
 		$data = $this->db->escape($data);
 		$date = date('Y-m-d H:i:s');
@@ -30,6 +12,7 @@ class FacebookOrder extends CI_Model {
 			"SET ANSI_WARNINGS ON
 
 			EXEC InsFaceBookOrders
+			@Check = '{$check}',
 			@TransID = NULL,
 			@TransDate = '{$date}',
 			@CardID = N{$data['card-number']},

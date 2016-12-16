@@ -26,21 +26,10 @@ class App extends MY_Controller {
 
 		if($this->form_validation->run('check')) {
 
-			$this->load->database();
+			$data = $this->input->post();
 
-			$ticket_number = $this->input->post('ticket-number');
-			$card_number = $this->input->post('card-number');
-			$phone = $this->input->post('phone');
-
-			$this->load->model('FacebookOrder');
-
-			if(!$this->FacebookOrder->exists($ticket_number, $card_number)) {
+			if($this->check_db($data, 1)) {
 				$this->view('step_2');
-			}
-
-			else {
-				$this->data['error_description'] = lang('already_used');
-				$this->view('error');
 			}
 		}
 
@@ -52,30 +41,16 @@ class App extends MY_Controller {
 
 	public function finish() {
 
-		$this->load->database();
-		$this->load->model('FacebookOrder');
-
 		$input = $this->session->userdata('input');
 		
 		if($input) {
 
-			try {
-				$this->FacebookOrder->check($input);
+			if($this->check_db($input, 0)) {
 				$phone = $input['phone'];
 				$this->load->library('Sms');
 				$this->sms->send($phone);
 				$this->session->unset_userdata('input');
 				$this->view('finish');
-			}
-
-			catch(AlreadyUsedException $e) {
-				$this->data['error_description'] = lang('already_used');
-				$this->view('error');
-			}
-
-			catch(Exception $e) {
-				$this->data['error_description'] = lang('incorrect_data');
-				$this->view('error');
 			}
 		}
 
@@ -88,6 +63,28 @@ class App extends MY_Controller {
 	public function privacy() {
 
 		echo '<h1>Under construction...</h1>';
+	}
+
+	private function check_db($data, $check) {
+
+		$this->load->database();
+
+		$this->load->model('FacebookOrder');
+
+		try {
+			$this->FacebookOrder->procedure($data, $check);
+			return TRUE;
+		}
+
+		catch(AlreadyUsedException $e) {
+			$this->data['error_description'] = lang('already_used');
+			$this->view('error');
+		}
+
+		catch(Exception $e) {
+			$this->data['error_description'] = lang('incorrect_data');
+			$this->view('error');
+		}
 	}
 
 }
