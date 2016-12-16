@@ -8,7 +8,7 @@ class Helper extends MY_Controller {
 	}
 
 	public function redirect() {
-		redirect('https://www.facebook.com/gpcvizrunoTsicocxleze');
+		redirect('https://www.facebook.com/gpcvizrunoTsicocxleze/app/624359667744524/');
 	}
 
 }
